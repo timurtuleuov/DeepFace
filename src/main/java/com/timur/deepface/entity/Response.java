@@ -3,6 +3,8 @@ package com.timur.deepface.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Entity
 @Data
 @Table(name = "responses")
@@ -24,5 +26,7 @@ public class Response {
 
     @Column(name = "prediction")
     private float[] prediction;
+    @Column(name = "response_date")
+    private LocalDate responseDate;
 
 }

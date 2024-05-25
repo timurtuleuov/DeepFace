@@ -28,6 +28,14 @@ dependencies {
 	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
 	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
 
+	implementation 'com.google.cloud.sql:postgres-socket-factory:1.18.0'
+//	// https://mvnrepository.com/artifact/com.google.cloud/spring-cloud-gcp-dependencies
+//	implementation 'com.google.cloud:spring-cloud-gcp-dependencies:5.3.0'
+//
+//	// https://mvnrepository.com/artifact/com.google.cloud/spring-cloud-gcp-starter-sql-postgresql
+//	implementation 'com.google.cloud:spring-cloud-gcp-starter-sql-postgresql:5.3.0'
+
+
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-authorization-server'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -44,4 +52,10 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+jar {
+	enabled = true
+}
+bootJar {
+	launchScript()
 }

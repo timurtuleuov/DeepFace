@@ -2,8 +2,7 @@ package com.timur.deepface.entity;
 
 public enum ContentType {
     IMAGE_JPEG("image/jpeg"),
-    IMAGE_PNG("image/png"),
-    TEXT_PLAIN("text/plain");
+    IMAGE_PNG("image/png");
 
     private final String value;
 
